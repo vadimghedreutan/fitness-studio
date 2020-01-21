@@ -1,0 +1,38 @@
+.section-footer {
+  background: var(--primary-color);
+  padding: 4rem 0;
+  color: #fff;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+
+    @include media() {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    margin-bottom: 0.7rem;
+  }
+
+  a {
+    line-height: 1.9;
+    color: #ccc;
+  }
+
+  a > i {
+    color: var(--secondary-color);
+    margin-right: .5rem;
+  }
+
+  .copyright {
+    align-self: flex-end;
+  }
+}

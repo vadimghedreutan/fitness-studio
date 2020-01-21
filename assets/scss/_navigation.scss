@@ -1,0 +1,145 @@
+.navbar {
+  background: #010101;
+  margin: 0;
+  background-image: linear-gradient(to left,#010101,#010101 50%,#f7f7f9 70%,#f7f7f9 100%,#010101 100%);
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    overflow: visible;
+
+    .logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+
+      @include media(1084px) {
+        padding: 10px 0 10px 0;  
+      }
+    }
+  }
+}
+
+nav {
+  display: flex;
+  justify-self: flex-end;
+  
+  justify-content: center;
+  align-items: center;
+
+  @include media(1084px) {
+    display: none;  
+  }
+
+  ul {
+    position: relative;
+
+    li {
+      display:inline-block;
+      background-color: #020202;
+    }
+  }
+
+  a {
+    display:block;
+    padding:10px;	
+    color:#FFF;
+    line-height: 60px;
+    text-decoration:none;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    
+    @include media(1024px) {
+      line-height: 40px;  
+    }
+
+    &:hover {
+      background-color: #019deb; 
+    }
+  }
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute; 
+  top: 60px; /* the height of the main nav */
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+  display:inherit;
+}
+
+nav ul li:hover > ul a:hover {
+  display:inherit;
+  background-color: #019deb;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+  position: relative;
+  background-color: #000; 
+
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px; 
+  left:170px; 
+}
+
+	
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+// Responsive Menu 
+
+button#responsive-menu-button {
+  background: none !important;
+}
+
+
+button#responsive-menu-button {
+  width: 0 !important;
+  height: 0 !important;
+}  
+
+@include media(600px) {
+  button#responsive-menu-button {
+    top: 10px !important;
+    right: 8% !important;
+  }  
+}
+
+@include media(320px) {
+  button#responsive-menu-button {
+    top: 8px !important;
+    right: 10% !important;
+  }  
+}
+
+#responsive-menu-container {
+  background: var(--secondary-color) !important;
+}
+
+#responsive-menu li.responsive-menu-item .responsive-menu-item-link {
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
+  font-family: 'Oswald', sans-serif; 
+}
+

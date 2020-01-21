@@ -1,0 +1,17 @@
+:root {
+  --primary-color: #010101;
+  --secondary-color: #019deb;
+  --overlay-color: rgba(0,0,0,0.3);
+}
+
+// Media Queries 
+// largest: 75em; // 1200/16
+// large: 62.5em; //1000
+// medium: 50em; //800
+// small: 37.5em; //600
+
+@mixin media($size: 600px) {
+  @media (max-width: $size) { 
+    @content; 
+  }
+}

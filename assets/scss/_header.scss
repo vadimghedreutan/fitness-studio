@@ -1,0 +1,136 @@
+.section-hero {
+  position: relative;
+
+  &__image {
+    height: 85vh;
+    position: relative;
+
+    @include media(1024px) {
+      height: 60vh;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    right: 40px;
+    bottom: 120px;
+    color: #fff;
+    background: rgba(0,0,0, .6);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 2rem;
+
+    @include media(874px) {
+      display: none;
+    }
+
+    h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      font-weight: 700; 
+    }
+  }
+
+  &__info-v2 {
+    position: absolute;
+    right: 40px;
+    bottom: 120px;
+    color: #fff;
+    background: rgba(0,0,0, .8);
+    height: 250px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    padding: 0 2rem;
+
+    h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700; 
+    }
+
+    p, ul li {
+      font-family: 'Oswald', sans-serif;
+    }
+
+    ul {
+      margin-top: .4rem;
+    }
+  }
+
+}
+
+.section-caption {
+  position: relative;
+  margin-top: -58px;
+
+  @include media(600px) {
+    margin-top: -51px;
+  }
+
+  .container {
+    background: #009deb;
+    box-shadow: 0 23px 30px -20px rgba(0,0,0,0.4);
+    transition: all 200ms ease-in-out;
+  }
+
+  &__text {
+    padding: 1.6rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+
+      @include media() {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+.section-caption-over {
+  position: relative;
+  margin-top: -50px;
+
+  @include media(800px) {
+    margin-top: -43px;
+  }
+
+  .container {
+    background: #009deb;
+    box-shadow: 0 23px 30px -20px rgba(0,0,0,0.4);
+    transition: all 200ms ease-in-out;
+  }
+
+  &__text {
+    padding: 1.4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+
+      @include media() {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
